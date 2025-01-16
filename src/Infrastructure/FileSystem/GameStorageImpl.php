@@ -60,4 +60,9 @@ class GameStorageImpl implements GameStorageInterface
         // totally overwrite game
         $this->saveGame($game);
     }
+
+    public function deleteGame(): void
+    {
+        $this->filesystem->remove($this->gameFilePath);
+    }
 }

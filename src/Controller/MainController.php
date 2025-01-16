@@ -14,6 +14,12 @@ class MainController extends AbstractController
     public function index(GameStorageManager $gameStorageManager): Response
     {
         $game = $gameStorageManager->getGameOrCreateAndSaveGame();
-        return $this->render('index.html.twig', ['game' => $game]);
+
+        $isGameOver = $game->isGameOver();
+        if ($isGameOver) {
+            $gameStorageManager->deleteGame();
+        }
+
+        return $this->render('index.html.twig', ['game' => $game, 'is_game_over' => $isGameOver]);
     }
 }

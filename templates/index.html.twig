@@ -2,12 +2,18 @@
 
 {% block body %}
   <h1>Bees</h1>
-  <ul>
-    {% for bee in game.beeList %}
-      <li>{{ bee.type }} : {{ bee.hitPoints }}</li>
-    {% endfor %}
-  </ul>
-  <form method="post" action="{{ path('random_hit') }}">
-    <button type="submit">Hit</button>
-  </form>
+  {% if is_game_over %}
+    <p>Game Over</p>
+    <a href="{{ path('main') }}">Play again</a>
+  {% else %}
+    <ul>
+      {% for bee in game.beeList %}
+        <li>{{ bee.type }} : {{ bee.hitPoints }}</li>
+      {% endfor %}
+    </ul>
+    <form method="post" action="{{ path('random_hit') }}">
+      <button type="submit">Hit</button>
+    </form>
+  {% endif %}
+
 {% endblock %}

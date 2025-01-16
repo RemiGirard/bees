@@ -15,7 +15,7 @@ See [exercise instructions here](./doc/instructions.md).
 
 [x] basic page with router and twig template
 [x] button with action route
-[ ] entities
+[x] entities
 [ ] create game
 [ ] save game
 [ ] edit game on action

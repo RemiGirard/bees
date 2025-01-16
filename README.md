@@ -18,6 +18,7 @@ See [exercise instructions here](./doc/instructions.md).
 [x] entities
 [x] create game
 [x] display game
-[ ] save game
+[x] save game
+[ ] load game
 [ ] edit game on action
 [ ] add end game rules

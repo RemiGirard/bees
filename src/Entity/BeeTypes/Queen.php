@@ -6,7 +6,7 @@ use App\Entity\Bee;
 
 class Queen extends Bee
 {
-    public function __construct() {
-        parent::__construct('queen', 100, 15);
+    public function __construct(int $hitPoints = 100) {
+        parent::__construct('queen', $hitPoints, 15);
     }
 }

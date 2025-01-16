@@ -13,7 +13,7 @@ class MainController extends AbstractController
     #[Route('/', name: 'main', methods: ['GET'])]
     public function index(GameStorageManager $gameStorageManager): Response
     {
-        $game = $gameStorageManager->createAndSaveGame();
+        $game = $gameStorageManager->getGameOrCreateAndSaveGame();
         return $this->render('index.html.twig', ['game' => $game]);
     }
 }

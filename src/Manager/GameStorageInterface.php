@@ -7,4 +7,5 @@ use App\Entity\Game;
 interface GameStorageInterface
 {
     public function saveGame(Game $game): void;
+    public function getGame(): Game | null;
 }

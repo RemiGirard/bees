@@ -12,10 +12,14 @@ class GameStorageManager
         $this->gameStorage = $gameStorage;
     }
 
-    public function createAndSaveGame(): Game
+    public function getGameOrCreateAndSaveGame(): Game
     {
-        $game = new Game();
-        $this->gameStorage->saveGame($game);
+        $game = $this->gameStorage->getGame();
+        if (!$game) {
+            $game = new Game();
+            $game->populate();
+            $this->gameStorage->saveGame($game);
+        }
 
         return $game;
     }

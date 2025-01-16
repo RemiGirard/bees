@@ -15,7 +15,12 @@ class Game
         return $this->beeList;
     }
 
-    public function __construct()
+    public function setBeeList(array $beeList): void
+    {
+        $this->beeList = $beeList;
+    }
+
+    public function populate(): void
     {
         $this->beeList = $this->createBeePopulation([
             ['class' => Queen::class, 'count' => 1],

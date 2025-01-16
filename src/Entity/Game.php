@@ -55,4 +55,30 @@ class Game
             return $bee->getHitPoints() > 0;
         });
     }
+
+
+
+    public function procGameOverIfNeeded(): void
+    {
+        if($this->doesQueenIsDead()){
+            $this->setAllBeeListHitPointsToZero();
+        }
+    }
+
+    protected function doesQueenIsDead(): bool
+    {
+        $aliveQueenList = array_filter($this->beeList, function (Bee $bee) {
+            return $bee->getType() === 'queen' && $bee->getHitPoints() > 0;
+        });
+
+        return count($aliveQueenList) === 0;
+    }
+
+    protected function setAllBeeListHitPointsToZero(): void
+    {
+        /** @var Bee $bee */
+        foreach ($this->beeList as $bee) {
+            $bee->setHitPoints(0);
+        }
+    }
 }

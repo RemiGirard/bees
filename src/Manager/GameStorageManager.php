@@ -38,4 +38,9 @@ class GameStorageManager
     {
         $this->gameStorage->updateGame($game);
     }
+
+    public function deleteGame(): void
+    {
+        $this->gameStorage->deleteGame();
+    }
 }

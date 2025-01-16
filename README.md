@@ -22,5 +22,5 @@ See [exercise instructions here](./doc/instructions.md).
 [x] load game
 [x] edit game on action
 [x] add end game rules
-[ ] add game over
-[ ] add click play again or just refresh
+[x] add game over
+[x] add click play again or just refresh

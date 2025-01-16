@@ -81,4 +81,9 @@ class Game
             $bee->setHitPoints(0);
         }
     }
+
+    public function isGameOver(): bool
+    {
+        return count($this->getAliveBeeList()) === 0;
+    }
 }

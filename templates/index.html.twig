@@ -2,6 +2,11 @@
 
 {% block body %}
   <h1>Bees</h1>
+  <ul>
+    {% for bee in game.beeList %}
+      <li>{{ bee.type }} : {{ bee.hitPoints }}</li>
+    {% endfor %}
+  </ul>
   <form method="post" action="{{ path('random_hit') }}">
     <button type="submit">Hit</button>
   </form>

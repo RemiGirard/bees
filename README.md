@@ -17,7 +17,7 @@ See [exercise instructions here](./doc/instructions.md).
 [x] button with action route
 [x] entities
 [x] create game
-[ ] display game
+[x] display game
 [ ] save game
 [ ] edit game on action
 [ ] add end game rules

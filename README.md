@@ -5,10 +5,13 @@ See [exercise instructions here](./doc/instructions.md).
 ## Requirements
 
 - [PHP >=8.2](https://www.php.net/manual/en/install.php)
+- [Composer](https://getcomposer.org/download/)
+- [Symfony CLI](https://symfony.com/download)
 
 ## Run
 
-    php -S localhost:8000 -t public
+    composer install
+    symfony server:start
 
 ## TODO
 

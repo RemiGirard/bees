@@ -11,3 +11,12 @@ See [exercise instructions here](./doc/instructions.md).
 
     symfony server:start
 
+## TODO
+
+[x] basic page with router and twig template
+[ ] button with action route
+[ ] entities
+[ ] create game
+[ ] save game
+[ ] edit game on action
+[ ] add end game rules

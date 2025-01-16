@@ -15,6 +15,7 @@ class RandomHitController extends AbstractController
         $game = $gameStorageManager->getGame();
 
         $game->hitRandomBee();
+        $game->procGameOverIfNeeded();
 
         $gameStorageManager->updateGame($game);
 

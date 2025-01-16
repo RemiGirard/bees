@@ -6,7 +6,7 @@ use App\Entity\Bee;
 
 class Scout extends Bee
 {
-    public function __construct() {
-        parent::__construct('scout', 30, 15);
+    public function __construct(int $hitPoints = 30) {
+        parent::__construct('scout', $hitPoints, 15);
     }
 }

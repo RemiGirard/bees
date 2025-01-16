@@ -19,6 +19,6 @@ See [exercise instructions here](./doc/instructions.md).
 [x] create game
 [x] display game
 [x] save game
-[ ] load game
+[x] load game
 [ ] edit game on action
 [ ] add end game rules

@@ -20,5 +20,5 @@ See [exercise instructions here](./doc/instructions.md).
 [x] display game
 [x] save game
 [x] load game
-[ ] edit game on action
+[x] edit game on action
 [ ] add end game rules

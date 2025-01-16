@@ -54,4 +54,10 @@ class GameStorageImpl implements GameStorageInterface
 
         return $game;
     }
+
+    public function updateGame(Game $game): void
+    {
+        // totally overwrite game
+        $this->saveGame($game);
+    }
 }

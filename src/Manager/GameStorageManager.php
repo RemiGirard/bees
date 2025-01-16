@@ -3,6 +3,7 @@
 namespace App\Manager;
 
 use App\Entity\Game;
+use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
 class GameStorageManager
 {
@@ -22,5 +23,19 @@ class GameStorageManager
         }
 
         return $game;
+    }
+
+    public function getGame(): Game
+    {
+        $game = $this->gameStorage->getGame();
+        if (!$game) {
+            throw new InvalidConfigurationException('Game not found');
+        }
+        return $game;
+    }
+
+    public function updateGame(Game $game): void
+    {
+        $this->gameStorage->updateGame($game);
     }
 }

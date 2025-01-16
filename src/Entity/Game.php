@@ -39,4 +39,20 @@ class Game
         }
         return $beeList;
     }
+
+    public function hitRandomBee(): void
+    {
+        $beeWithLifeList = $this->getAliveBeeList();
+        if(count($beeWithLifeList) > 0) {
+            $bee = $beeWithLifeList[array_rand($beeWithLifeList)];
+            $bee->gotHit();
+        }
+    }
+
+    protected function getAliveBeeList(): array
+    {
+        return array_filter($this->beeList, function (Bee $bee) {
+            return $bee->getHitPoints() > 0;
+        });
+    }
 }
